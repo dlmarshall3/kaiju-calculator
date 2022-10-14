@@ -1,0 +1,15 @@
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.kaiju-div {
+    display: inline-block;
+    text-align: center;
+}
+
+.not-selected {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
