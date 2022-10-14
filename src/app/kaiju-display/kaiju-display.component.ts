@@ -18,10 +18,7 @@ export class KaijuDisplayComponent implements OnInit {
   }
 
   get kaijuHeight(){
-    if(!this.selectedKaiju){
-      return " ";
-    }
-    return this.kaijuService.chosenKaijuHeight;
+    return Math.floor(this.kaijuService.chosenKaijuHeight);
   }
 
   get kaijuImage(){
