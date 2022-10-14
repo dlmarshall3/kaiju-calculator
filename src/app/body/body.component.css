@@ -1,3 +1,12 @@
 .container {
     margin-top: 5rem;
 }
+
+.calculator-component {
+    margin-top: 3rem;
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+}

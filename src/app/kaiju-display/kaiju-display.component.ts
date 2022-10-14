@@ -18,6 +18,9 @@ export class KaijuDisplayComponent implements OnInit {
   }
 
   get kaijuHeight(){
+    if(!this.selectedKaiju){
+      return " ";
+    }
     return this.kaijuService.chosenKaijuHeight;
   }
 
@@ -25,7 +28,7 @@ export class KaijuDisplayComponent implements OnInit {
     if(!this.selectedKaiju){
       return 'assets/img/godzilla.png';
     } else {
-      return `assets/img/${this.selectedKaiju.toLowerCase()}.png`
+      return `assets/img/${this.selectedKaiju.toLowerCase().replace(/ +/g, "")}.png`
     }
   }
 }

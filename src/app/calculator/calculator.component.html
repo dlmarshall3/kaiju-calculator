@@ -1,17 +1,19 @@
-<div class="text-center">
+<div>
     <label>
-        Select initial value:
+        <strong>Select initial value:</strong>
     </label>
-    <input type="text">
-    <select name="" id="">
-        <option value="mm">mm</option>
-        <option value="cm">cm</option>
-        <option value="m">m</option>
-        <option value="km">km</option>
-        <option value="in">in</option>
-        <option value="ft">ft</option>
-        <option value="yd">yd</option>
-        <option value="mi">mi</option>
-        <option value="nm">nm</option>
+</div>
+<div>
+    <input type="text" #calculatorInput class="shadow-sm" style="border-radius: 40px" [(ngModel)]="calculatorInputCheck">
+    <select name="" #unitChoiceSelector class="shadow-sm" style="border-radius: 25px;  text-align: center">
+        <option *ngFor="let unit of units" value="{{unit}}">{{unit}}</option>
     </select>
+</div>
+<div>
+    <button 
+    [disabled]="calculatorInputCheck === ''" 
+    class="btn btn-primary" 
+    (click)="onButtonClick(+calculatorInput.value, unitChoiceSelector.value)">
+        Convert
+    </button>
 </div>

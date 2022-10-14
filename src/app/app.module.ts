@@ -9,6 +9,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { KaijuDisplayComponent } from './kaiju-display/kaiju-display.component';
 import { ConversionResultsComponent } from './conversion-results/conversion-results.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { FormsModule } from '@angular/forms';
+import { InstructionsComponent } from './instructions/instructions.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     CalculatorComponent,
     KaijuDisplayComponent,
     ConversionResultsComponent,
-    DropdownComponent
+    DropdownComponent,
+    InstructionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
