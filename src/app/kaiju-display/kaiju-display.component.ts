@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component } from '@angular/core';
+
 import { KaijuService } from '../shared/kaiju.service';
 
 @Component({
@@ -6,26 +7,23 @@ import { KaijuService } from '../shared/kaiju.service';
   templateUrl: './kaiju-display.component.html',
   styleUrls: ['./kaiju-display.component.css']
 })
-export class KaijuDisplayComponent implements OnInit {
+export class KaijuDisplayComponent {
 
   constructor(private kaijuService: KaijuService) { }
 
-  ngOnInit(): void {
+  public get kaijuHeight(){
+    return Math.floor(this.kaijuService.selectedKaijuHeight);
   }
 
-  get selectedKaiju(){
-    return this.kaijuService.selectedKaiju;
-  }
-
-  get kaijuHeight(){
-    return Math.floor(this.kaijuService.chosenKaijuHeight);
-  }
-
-  get kaijuImage(){
+  public get kaijuImage(){
     if(!this.selectedKaiju){
       return 'assets/img/godzilla.png';
     } else {
       return `assets/img/${this.selectedKaiju.toLowerCase().replace(/ +/g, "")}.png`
     }
+  }
+
+  public get selectedKaiju(){
+    return this.kaijuService.selectedKaiju;
   }
 }

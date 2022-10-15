@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { CalculatorService } from '../shared/calculator.service';
 import { iKaiju } from '../shared/ikaiju';
 import { KaijuService } from '../shared/kaiju.service';
 
@@ -8,18 +9,12 @@ import { KaijuService } from '../shared/kaiju.service';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent implements OnInit {
-  godzillaKaiju: iKaiju[] = [];
-  gameraKaiju: iKaiju[] = [];
-  ultramanKaiju: iKaiju[] = [];
-  pacificRimKaiju: iKaiju[] = [];
+  public godzillaKaiju: iKaiju[] = [];
+  public gameraKaiju: iKaiju[] = [];
+  public ultramanKaiju: iKaiju[] = [];
+  public pacificRimKaiju: iKaiju[] = [];
 
-  // need to figure out why it takes more than one click
-  @ViewChild('offcanvasGodzilla', {static:true}) offcanvasGodzilla!: ElementRef;
-  @ViewChild('offcanvasGamera', {static:true}) offcanvasGamera!: ElementRef;
-  @ViewChild('offcanvasUltraman', {static:true}) offcanvasUltraman!: ElementRef;
-  @ViewChild('offcanvasPacificRim', {static:true}) offcanvasPacificRim!: ElementRef;
-
-  constructor(private kaijuService: KaijuService) { }
+  constructor(private kaijuService: KaijuService, private calculatorService: CalculatorService) { }
 
   ngOnInit(): void {
     this.godzillaKaiju = this.kaijuService.getGodzillaKaiju;
@@ -28,23 +23,44 @@ export class DropdownComponent implements OnInit {
     this.pacificRimKaiju = this.kaijuService.getpacificRimKaiju;
   }
 
+  public get kaijuHeight(): number {
+    return this.kaijuService.selectedKaijuHeight;
+  }
+
+  public get selectedKaiju(): string {
+    return this.kaijuService.selectedKaiju;
+  }
+
+  // need to look into refactoring the current kaiju check; could be optimized
   onGodzillaMonsterSelected(name: string){
-    this.kaijuService.chosenMonsterName = name;
-    this.kaijuService.chosenKaijuGroup = 'godzilla';
+    if(this.selectedKaiju !== name){
+      this.calculatorService.displayResults = false;
+    }
+    this.kaijuService.selectedKaijuName = name;
+    this.kaijuService.selectedKaijuGroup = 'godzilla';
   }
 
   onGameraMonsterSelected(name: string){
-    this.kaijuService.chosenMonsterName = name;
-    this.kaijuService.chosenKaijuGroup = 'gamera';
+    if(this.selectedKaiju !== name){
+      this.calculatorService.displayResults = false;
+    }
+    this.kaijuService.selectedKaijuName = name;
+    this.kaijuService.selectedKaijuGroup = 'gamera';
   }
 
   onUltramanMonsterSelected(name: string){
-    this.kaijuService.chosenMonsterName = name;
-    this.kaijuService.chosenKaijuGroup = 'ultraman';
+    if(this.selectedKaiju !== name){
+      this.calculatorService.displayResults = false;
+    }
+    this.kaijuService.selectedKaijuName = name;
+    this.kaijuService.selectedKaijuGroup = 'ultraman';
   }
 
   onPacificRimMonsterSelected(name: string){
-    this.kaijuService.chosenMonsterName = name;
-    this.kaijuService.chosenKaijuGroup = 'pacificRim';
+    if(this.selectedKaiju !== name){
+      this.calculatorService.displayResults = false;
+    }
+    this.kaijuService.selectedKaijuName = name;
+    this.kaijuService.selectedKaijuGroup = 'pacificRim';
   }
 }

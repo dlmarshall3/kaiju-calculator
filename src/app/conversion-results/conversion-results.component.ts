@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { CalculatorService } from '../shared/calculator.service';
 import { KaijuService } from '../shared/kaiju.service';
 
@@ -7,23 +8,15 @@ import { KaijuService } from '../shared/kaiju.service';
   templateUrl: './conversion-results.component.html',
   styleUrls: ['./conversion-results.component.css']
 })
-export class ConversionResultsComponent implements OnInit {
+export class ConversionResultsComponent {
 
   constructor(private kaijuService: KaijuService, private calculatorService: CalculatorService) { }
 
-  ngOnInit(): void {
-  }
-
-  //works
-  public get convertedKaijuHeight(){
-    return this.calculatorService.convertedKaijuHeightResult;
-  }
-
-  public get inputValueVariable(){
+  public get inputValueVariable() {
     return this.calculatorService.input;
   }
 
-  public get unitChoiceVariable(){
+  public get unitChoiceVariable() {
     return this.calculatorService.unit;
   }
 
@@ -35,10 +28,7 @@ export class ConversionResultsComponent implements OnInit {
     return this.calculatorService.monsterIntoInputVariable;
   }
 
-
-  //works
-  public get selectedKaiju(){
+  public get selectedKaiju() {
     return this.kaijuService.selectedKaiju;
   }
-
 }

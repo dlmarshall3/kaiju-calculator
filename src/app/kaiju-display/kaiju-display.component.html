@@ -1,7 +1,7 @@
 <div class="text-center kaiju-display">
-    <h1 *ngIf="selectedKaiju; else elseBlock">{{selectedKaiju}}</h1>
-    <ng-template #elseBlock><h1>Select your</h1></ng-template>
+    <h1 *ngIf="selectedKaiju; else elseBlockTop">{{selectedKaiju}}</h1>
+        <ng-template #elseBlockTop><h1>Select your</h1></ng-template>
     <img src={{kaijuImage}} class="shadow-lg">
-    <h1 *ngIf="selectedKaiju; else elseBlockTwo">{{kaijuHeight}} meters</h1>
-    <ng-template #elseBlockTwo><h1>kaiju!</h1></ng-template>
+    <h1 *ngIf="selectedKaiju; else elseBlockBottom">{{kaijuHeight}} meters</h1>
+        <ng-template #elseBlockBottom><h1>kaiju!</h1></ng-template>
 </div>

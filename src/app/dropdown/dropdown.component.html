@@ -1,58 +1,47 @@
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Godzilla
+        Godzilla
     </a>
     <ul class="dropdown-menu">
-        <li #offcanvasGodzilla>
-            <a class="dropdown-item" 
-            *ngFor="let mon of godzillaKaiju" 
-            href="#"
-            (click)="onGodzillaMonsterSelected(mon.name)">{{mon.name}}
+        <li>
+            <a class="dropdown-item" *ngFor="let mon of godzillaKaiju" href="#"
+                (click)="onGodzillaMonsterSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>
 </li>
-
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Gamera
+        Gamera
     </a>
     <ul class="dropdown-menu">
-        <li #offcanvasGamera>
-            <a class="dropdown-item" 
-            href="#"
-            *ngFor="let mon of gameraKaiju"
-            (click)="onGameraMonsterSelected(mon.name)">{{mon.name}}
+        <li>
+            <a class="dropdown-item" href="#" *ngFor="let mon of gameraKaiju"
+                (click)="onGameraMonsterSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>
 </li>
-
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Ultraman
+        Ultraman
     </a>
     <ul class="dropdown-menu">
-        <li #offcanvasUltraman>
-            <a class="dropdown-item" 
-            href="#" 
-            *ngFor="let mon of ultramanKaiju"
-            (click)="onUltramanMonsterSelected(mon.name)">{{mon.name}}
+        <li>
+            <a class="dropdown-item" href="#" *ngFor="let mon of ultramanKaiju"
+                (click)="onUltramanMonsterSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>
 </li>
-
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Pacific Rim
+        Pacific Rim
     </a>
     <ul class="dropdown-menu">
-        <li #offcanvasPacificRim>
-            <a class="dropdown-item" 
-            href="#" 
-            *ngFor="let mon of pacificRimKaiju"
-            (click)="onPacificRimMonsterSelected(mon.name)">{{mon.name}}
+        <li>
+            <a class="dropdown-item" href="#" *ngFor="let mon of pacificRimKaiju"
+                (click)="onPacificRimMonsterSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>
