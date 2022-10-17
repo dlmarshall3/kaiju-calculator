@@ -20,15 +20,19 @@ export class ConversionResultsComponent {
     return this.calculatorService.unit;
   }
 
-  public get inputIntoMonster() {
-    return this.calculatorService.inputIntoMonsterVariable;
+  public get inputIntoKaiju() {
+    return this.calculatorService.inputIntoKaijuVariable;
   }
 
-  public get monsterIntoInput() {
-    return this.calculatorService.monsterIntoInputVariable;
+  public get kaijuIntoInput() {
+    return this.calculatorService.kaijuIntoInputVariable;
   }
 
   public get selectedKaiju() {
     return this.kaijuService.selectedKaiju;
+  }
+
+  public get trimmedInputIntoKaiju() {
+    return this.calculatorService.trimmedInputIntoKaijuVariable;
   }
 }

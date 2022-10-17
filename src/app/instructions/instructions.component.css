@@ -1,0 +1,11 @@
+button {
+    margin-bottom: 2.5rem;
+}
+
+button:first-of-type {
+    margin-right: .5rem;
+}
+
+button:last-of-type {
+    margin-left: .5rem;
+}

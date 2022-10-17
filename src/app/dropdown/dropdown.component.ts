@@ -32,7 +32,7 @@ export class DropdownComponent implements OnInit {
   }
 
   // need to look into refactoring the current kaiju check; could be optimized
-  onGodzillaMonsterSelected(name: string){
+  onGodzillaKaijuSelected(name: string){
     if(this.selectedKaiju !== name){
       this.calculatorService.displayResults = false;
     }
@@ -40,7 +40,7 @@ export class DropdownComponent implements OnInit {
     this.kaijuService.selectedKaijuGroup = 'godzilla';
   }
 
-  onGameraMonsterSelected(name: string){
+  onGameraKaijuSelected(name: string){
     if(this.selectedKaiju !== name){
       this.calculatorService.displayResults = false;
     }
@@ -48,7 +48,7 @@ export class DropdownComponent implements OnInit {
     this.kaijuService.selectedKaijuGroup = 'gamera';
   }
 
-  onUltramanMonsterSelected(name: string){
+  onUltramanKaijuSelected(name: string){
     if(this.selectedKaiju !== name){
       this.calculatorService.displayResults = false;
     }
@@ -56,7 +56,7 @@ export class DropdownComponent implements OnInit {
     this.kaijuService.selectedKaijuGroup = 'ultraman';
   }
 
-  onPacificRimMonsterSelected(name: string){
+  onPacificRimKaijuSelected(name: string){
     if(this.selectedKaiju !== name){
       this.calculatorService.displayResults = false;
     }

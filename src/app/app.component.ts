@@ -11,12 +11,4 @@ import { KaijuService } from './shared/kaiju.service';
 export class AppComponent {
   
   constructor(private kaijuService: KaijuService, private calculatorService: CalculatorService) { }
-  
-  public get selectedKaiju(){
-    return this.kaijuService.selectedKaiju;
-  }
-
-  public get displayBoolean(){
-    return this.calculatorService.displayResults;
-  }
 }

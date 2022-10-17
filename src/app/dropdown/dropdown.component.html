@@ -5,7 +5,7 @@
     <ul class="dropdown-menu">
         <li>
             <a class="dropdown-item" *ngFor="let mon of godzillaKaiju" href="#"
-                (click)="onGodzillaMonsterSelected(mon.name)">{{mon.name}}
+                (click)="onGodzillaKaijuSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>
@@ -17,7 +17,7 @@
     <ul class="dropdown-menu">
         <li>
             <a class="dropdown-item" href="#" *ngFor="let mon of gameraKaiju"
-                (click)="onGameraMonsterSelected(mon.name)">{{mon.name}}
+                (click)="onGameraKaijuSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>
@@ -29,7 +29,7 @@
     <ul class="dropdown-menu">
         <li>
             <a class="dropdown-item" href="#" *ngFor="let mon of ultramanKaiju"
-                (click)="onUltramanMonsterSelected(mon.name)">{{mon.name}}
+                (click)="onUltramanKaijuSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>
@@ -41,7 +41,7 @@
     <ul class="dropdown-menu">
         <li>
             <a class="dropdown-item" href="#" *ngFor="let mon of pacificRimKaiju"
-                (click)="onPacificRimMonsterSelected(mon.name)">{{mon.name}}
+                (click)="onPacificRimKaijuSelected(mon.name)">{{mon.name}}
             </a>
         </li>
     </ul>

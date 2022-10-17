@@ -29,9 +29,10 @@ export class CalculatorComponent implements OnInit {
   public onButtonClick(input: number, unit: string){
     this.calculatorService.setInputValue = input;
     this.calculatorService.unitChoice = unit;
-    let convertedKaijuHeight = this.calculatorService.convertMonsterHeight(unit, this.kaijuHeight);
-    this.calculatorService.inputIntoMonster = convertedKaijuHeight;
-    this.calculatorService.monsterIntoInput = convertedKaijuHeight;
+    let convertedKaijuHeight = this.calculatorService.convertKaijuHeight(unit, this.kaijuHeight);
+    this.calculatorService.inputIntoKaiju = convertedKaijuHeight;
+    this.calculatorService.trimmedInputIntoKaiju = convertedKaijuHeight;
+    this.calculatorService.kaijuIntoInput = convertedKaijuHeight;
   }
 
 }

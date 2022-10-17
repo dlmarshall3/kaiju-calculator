@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 
-import { KaijuService } from './kaiju.service';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -9,15 +7,16 @@ export class CalculatorService {
   public unit!: string;
   public convertedHeight!: number;
   public input!: number;
-  public inputIntoMonsterVariable!: number;
-  public monsterIntoInputVariable!: number;
+  public inputIntoKaijuVariable!: number;
+  public kaijuIntoInputVariable!: number;
+  public trimmedInputIntoKaijuVariable!: number;
   public displayResults: boolean = false;
 
   public units = [
     'millimeters', 'centimeters', 'kilometers', 'inches', 'feet', 'yards', 'miles', 'nautical miles'
   ];
 
-  public convertMonsterHeight(unit: string, kaijuHeight: number){
+  public convertKaijuHeight(unit: string, kaijuHeight: number){
     if(unit === 'inches'){
       this.displayResults = true;
       return kaijuHeight * 39.3701;
@@ -49,16 +48,28 @@ export class CalculatorService {
     }
   }
 
-  public set inputIntoMonster(convertedHeight: number){
-    this.inputIntoMonsterVariable = this.input / convertedHeight;
+  private trimNumber(number: number, points: number = 2): number {
+    let trimmed = +number.toFixed(points);
+    if(trimmed != 0){
+      return trimmed;
+    }
+    return this.trimNumber(number, points + 1);
   }
 
-  public set monsterIntoInput(convertedHeight: number){
-    this.monsterIntoInputVariable = convertedHeight / this.input;
+  public set inputIntoKaiju(convertedHeight: number){
+    this.inputIntoKaijuVariable = this.input / convertedHeight;
+  }
+
+  public set kaijuIntoInput(convertedHeight: number){
+    this.kaijuIntoInputVariable = convertedHeight / this.input;
   }
 
   public set setInputValue(input: number){
     this.input = input;
+  }
+
+  public set trimmedInputIntoKaiju(convertedHeight: number){
+    this.trimmedInputIntoKaijuVariable = this.trimNumber((this.input / convertedHeight));
   }
 
   public set unitChoice(unit: string){

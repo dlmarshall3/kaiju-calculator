@@ -10,6 +10,9 @@ import { ConversionResultsComponent } from './conversion-results/conversion-resu
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { FormsModule } from '@angular/forms';
 import { InstructionsComponent } from './instructions/instructions.component';
+import { BodyComponent } from './body/body.component';
+import { FaqComponent } from './faq/faq.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { InstructionsComponent } from './instructions/instructions.component';
     KaijuDisplayComponent,
     ConversionResultsComponent,
     DropdownComponent,
-    InstructionsComponent
+    InstructionsComponent,
+    BodyComponent,
+    FaqComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

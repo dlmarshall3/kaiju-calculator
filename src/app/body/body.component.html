@@ -1,0 +1,20 @@
+<div class="col-md-12">
+    <app-kaiju-display></app-kaiju-display>
+    <div class="container calculator-component">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <app-instructions></app-instructions>
+                    </div>
+                    <div class="col-md-5 input-column">
+                        <app-calculator *ngIf="selectedKaiju"></app-calculator>
+                    </div>
+                    <div class="col-md-3" *ngIf="displayBoolean">
+                        <app-conversion-results></app-conversion-results>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
