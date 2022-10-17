@@ -17,7 +17,7 @@ export class KaijuDisplayComponent {
 
   public get kaijuImage(){
     if(!this.selectedKaiju){
-      return 'assets/img/godzilla.png';
+      return 'assets/img/group.png';
     } else {
       return `assets/img/${this.selectedKaiju.toLowerCase().replace(/ +/g, "")}.png`
     }
