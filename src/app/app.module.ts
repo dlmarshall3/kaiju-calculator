@@ -13,6 +13,8 @@ import { InstructionsComponent } from './instructions/instructions.component';
 import { BodyComponent } from './body/body.component';
 import { FaqComponent } from './faq/faq.component';
 import { AboutComponent } from './about/about.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

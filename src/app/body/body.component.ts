@@ -8,7 +8,6 @@ import { KaijuService } from '../shared/kaiju.service';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
-
   constructor(private kaijuService: KaijuService, private calculatorService: CalculatorService) { }
   
   public get selectedKaiju(){
@@ -18,5 +17,6 @@ export class BodyComponent {
   public get displayBoolean(){
     return this.calculatorService.displayResults;
   }
+
 
 }
