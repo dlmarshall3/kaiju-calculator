@@ -118,10 +118,10 @@ export class KaijuService {
     ],
     pacificRim: [
       { name: 'Knifehead', height: 96.012 },
-      { name: 'Onibaba', height: 57.3024 },
-      { name: 'Otachi', height: 63.0936 },
       { name: 'Leatherback', height: 81.3816 },
       { name: 'Mutavore', height: 89.916 },
+      { name: 'Onibaba', height: 57.3024 },
+      { name: 'Otachi', height: 63.0936 },
       { name: 'Raiju', height: 109.118 },
       { name: 'Scunner', height: 134.417 },
       { name: 'Slattern', height: 181.661 },
